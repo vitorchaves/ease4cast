@@ -1,3 +1,17 @@
+# Instruções para gerar o Build
+
+Ao entrar na pasta raiz do projeto, precisa abrir um terminal e digitar um `npm install` e um `yarn install` (É necessário ter o Node na máquina);
+
+Após fazer a instalações das dependências, precisará rodar um `yarn build` para gerar o pacote otimizado para WEB. 
+
+Feito isso, o build será gerado e basta copiar os arquivos para onde deseja hospedar.
+
+
+### Links úteis e documentação base abaixo.
+
+---
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
