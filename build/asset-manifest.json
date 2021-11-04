@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.js": "/static/js/main.9a34633c.chunk.js",
+    "main.js.map": "/static/js/main.9a34633c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.fddc2017.js",
+    "runtime-main.js.map": "/static/js/runtime-main.fddc2017.js.map",
+    "static/js/2.7e46a424.chunk.js": "/static/js/2.7e46a424.chunk.js",
+    "static/js/2.7e46a424.chunk.js.map": "/static/js/2.7e46a424.chunk.js.map",
+    "static/js/3.b516731e.chunk.js": "/static/js/3.b516731e.chunk.js",
+    "static/js/3.b516731e.chunk.js.map": "/static/js/3.b516731e.chunk.js.map",
+    "index.html": "/index.html",
+    "static/js/2.7e46a424.chunk.js.LICENSE.txt": "/static/js/2.7e46a424.chunk.js.LICENSE.txt",
+    "static/media/baleia.8f0cae78.svg": "/static/media/baleia.8f0cae78.svg",
+    "static/media/bolhas.f13c27cc.svg": "/static/media/bolhas.f13c27cc.svg",
+    "static/media/grafico.824c1e76.svg": "/static/media/grafico.824c1e76.svg",
+    "static/media/linkedin.a6dce84c.svg": "/static/media/linkedin.a6dce84c.svg",
+    "static/media/mail.cb721bb6.svg": "/static/media/mail.cb721bb6.svg",
+    "static/media/minibolhas.80d59d18.svg": "/static/media/minibolhas.80d59d18.svg",
+    "static/media/ondas.d8490139.svg": "/static/media/ondas.d8490139.svg",
+    "static/media/peixes.49219dd1.svg": "/static/media/peixes.49219dd1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fddc2017.js",
+    "static/js/2.7e46a424.chunk.js",
+    "static/js/main.9a34633c.chunk.js"
+  ]
+}
