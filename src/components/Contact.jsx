@@ -25,6 +25,7 @@ export default function Contact() {
     dadosFormulario.append("name", nome);
     dadosFormulario.append("email", email);
     dadosFormulario.append("phone", telefone);
+    dadosFormulario.append("subject", assunto);
     dadosFormulario.append("message", mensagem);
 
     const config = {
@@ -80,6 +81,7 @@ export default function Contact() {
                   type="text"
                   id="name"
                   className="form-control"
+                  required
                   onChange={(e) => setNome(e.target.value)}
                 />
               </div>
@@ -93,6 +95,7 @@ export default function Contact() {
                 <input
                   type="email"
                   id="email"
+                  required
                   className="form-control"
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -105,7 +108,7 @@ export default function Contact() {
                   htmlFor="telephone"
                   className={telefone === "" ? false : "active"}
                 >
-                  telefone <span>*</span>
+                  telefone
                 </label>
                 <input
                   type="tel"
@@ -125,6 +128,7 @@ export default function Contact() {
                   type="email"
                   id="subject"
                   className="form-control"
+                  required
                   onChange={(e) => setAssunto(e.target.value)}
                 />
               </div>
@@ -141,6 +145,7 @@ export default function Contact() {
                 <textarea
                   id="message"
                   rows="7"
+                  required
                   className="form-control"
                   onChange={(e) => setMensagem(e.target.value)}
                 ></textarea>
