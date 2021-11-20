@@ -107,7 +107,7 @@ const GlobalStyle = createGlobalStyle`
               margin: 0 5px;
             }
             a{
-              color: #A1A5C7;
+              color: #707495;
               text-decoration: none;
             }
             &:hover a{
@@ -168,7 +168,7 @@ const GlobalStyle = createGlobalStyle`
       p{
         margin: 0;
         padding: 0;
-        color: #A1A5C7;
+        color: #707495;
         font-weight: 600;
         font-size: 14px;
         text-align: right;
@@ -499,6 +499,12 @@ const GlobalStyle = createGlobalStyle`
         border-radius: 0!important;
         box-shadow: none!important;
       }
+      .positiveReturn{
+        color: green;
+      }
+      .negativeReturn{
+        color: red;
+      }
       button{
         border: solid 1px black;
         background: white;
@@ -510,6 +516,14 @@ const GlobalStyle = createGlobalStyle`
         font-size: 13px;
         margin-inline: auto;
         font-weight: 600;
+        transition: all ease .2s;
+        &:hover{
+          background: black;
+          color: white;
+          img{
+            filter: invert(1);
+          }
+        }
         img{
           margin-left: 5px;
           vertical-align: middle;

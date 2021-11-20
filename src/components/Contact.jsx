@@ -11,6 +11,7 @@ export default function Contact() {
   const [assunto, setAssunto] = useState("");
   const [mensagem, setMensagem] = useState("");
   const [enviando, setEnviando] = useState(false);
+  const [sendedMessage, setSendedMessage] = useState(null);
 
   const api = axios.create({
     baseURL:
@@ -32,20 +33,20 @@ export default function Contact() {
       headers: { "Content-Type": "multipart/form-data" },
     };
 
-    api
-      .post("/", dadosFormulario, config)
-      .then((response) => {
-        //console.log(response);
-        setEnviando(false);
-        alert("Sua mensagem foi enviada com sucesso. Obrigado!");
-      })
-      .catch((error) => {
-        //console.log(error);
-        setEnviando(false);
-        alert(
-          "Sua mensagem pode não ter sido enviada. Por favor, tente-novamente em instantes."
-        );
-      });
+    if (!enviando) {
+      api
+        .post("/", dadosFormulario, config)
+        .then((response) => {
+          //console.log(response);
+          setEnviando(false);
+          setSendedMessage(true);
+        })
+        .catch((error) => {
+          //console.log(error);
+          setEnviando(false);
+          setSendedMessage(false);
+        });
+    }
   };
 
   return (
@@ -63,11 +64,15 @@ export default function Contact() {
             contato conosco. Ficaremos felizes em ajudá-los a mergulhar fundo
             nos seus dados e se tornar uma empresa Data Driven.
           </p>
+          <br />
+          <h5>
+            <strong>Fale conosco!</strong>
+          </h5>
         </div>
       </div>
 
-      <div className="row">
-        <div className="col-lg-6 offset-lg-1">
+      <div className="row justify-content-center">
+        <div className="col-lg-6">
           <form>
             <div className="row">
               <div className="form-group col-md-6 d-flex flex-column">
@@ -155,9 +160,22 @@ export default function Contact() {
             <div className="row">
               <div className="form-group col-md-12 d-flex flex-column">
                 <button type="button" onClick={() => sendFormulary()}>
-                  {enviando ? "Enviando..." : "Enviar"}
+                  {enviando ? "Enviando..." : "Enviar"} &nbsp;
                   <img src={imageMail} alt="Mensagem" />
                 </button>
+                <br />
+                {sendedMessage != null && (
+                  <p
+                    class={
+                      "text-center mt-3" +
+                      (sendedMessage ? " positiveReturn" : " negativeReturn")
+                    }
+                  >
+                    {sendedMessage
+                      ? "Mensagem enviada com sucesso."
+                      : "Sua mensagem pode não ter sido enviada. Por favor, tente novamente."}
+                  </p>
+                )}
               </div>
             </div>
           </form>

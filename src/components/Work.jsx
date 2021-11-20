@@ -9,8 +9,8 @@ export default function Work() {
         </p>
         </div>
       </div>
-      <div className="row">
-        <div className="col-md-3 offset-md-2 list">
+      <div className="row justify-content-center">
+        <div className="col-md-3 list">
           <h3 className="list-title">Horizonte de planejamento</h3>
           <div className="list-list">
             <div>
